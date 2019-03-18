@@ -46,7 +46,10 @@
   | Ctrl + a → K | 上画面サイズを狭める |
   | Ctrl + a → J | 下画面サイズを狭める |
   | Ctrl + a → c | 新規window作成|
-  | Ctrl + a → n | window移動|
+  | Ctrl + a → n | window次移動|
+  | Ctrl + a → p | window前移動|
+  | Ctrl + a → w | window一覧|
+  | Ctrl + a → & | window破棄 |
   | Ctrl + a → [ | copyモード開始|
   | copyモード → h |カーソルを左に移動|
   | copyモード → j |カーソルを下に移動|
