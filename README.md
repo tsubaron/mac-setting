@@ -36,23 +36,23 @@
 
   | コマンド | 説明 | 備考 |
   ----|----|----
-  | Ctrl + a → \| | 画面の垂直分割 ||
-  | Ctrl + a → - | 画面の水平分割 ||
-  | Ctrl + a → l | 右画面移動 ||
-  | Ctrl + a → h | 左画面移動 ||
-  | Ctrl + a → k | 上画面移動 ||
-  | Ctrl + a → j | 下画面移動 ||
-  | Ctrl + a → L | 右画面サイズを狭める | L連続入力で一気に画面調整できる |
-  | Ctrl + a → H | 左画面サイズを狭める | H連続入力で一気に画面調整できる |
-  | Ctrl + a → K | 上画面サイズを狭める | K連続入力で一気に画面調整できる |
-  | Ctrl + a → J | 下画面サイズを狭める | J連続入力で一気に画面調整できる |
-  | Ctrl + a → c | 新規window作成||
-  | Ctrl + a → n | window次移動|
-  | Ctrl + a → p | window前移動|
-  | Ctrl + a → & | window破棄 |
-  | Ctrl + a → { | 画面入れ替え||
-  | Ctrl + a → } | 画面入れ替え||
-  | Ctrl + a → [ | copyモード開始||
+  | Ctrl + Space → \| | 画面の垂直分割 ||
+  | Ctrl + Space → - | 画面の水平分割 ||
+  | Ctrl + Space → l | 右画面移動 ||
+  | Ctrl + Space → h | 左画面移動 ||
+  | Ctrl + Space → k | 上画面移動 ||
+  | Ctrl + Space → j | 下画面移動 ||
+  | Ctrl + Space → L | 右画面サイズを狭める | L連続入力で一気に画面調整できる |
+  | Ctrl + Space → H | 左画面サイズを狭める | H連続入力で一気に画面調整できる |
+  | Ctrl + Space → K | 上画面サイズを狭める | K連続入力で一気に画面調整できる |
+  | Ctrl + Space → J | 下画面サイズを狭める | J連続入力で一気に画面調整できる |
+  | Ctrl + Space → c | 新規window作成||
+  | Ctrl + Space → n | window次移動|
+  | Ctrl + Space → p | window前移動|
+  | Ctrl + Space → & | window破棄 |
+  | Ctrl + Space → { | 画面入れ替え||
+  | Ctrl + Space → } | 画面入れ替え||
+  | Ctrl + Space → Ctrl + Space | copyモード開始||
   | copyモード → h |カーソルを左に移動||
   | copyモード → j |カーソルを下に移動||
   | copyモード → k |カーソルを上に移動||
