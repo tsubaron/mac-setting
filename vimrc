@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"
+
 noremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -15,8 +17,9 @@ nmap <Leader><Leader> V
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-"vnoremap <silent> y y`]
-"vnoremap <silent><Plug>PeepOpen<Plug>PeepOpen`]
-"nnoremap <silent><Plug>PeepOpen<Plug>PeepOpen`]
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 
 
