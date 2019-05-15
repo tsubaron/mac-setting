@@ -21,5 +21,7 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-
-
+imap { {}<Left>
+imap ' ''<Left>
+imap " ""<Left>
+imap ( ()<Left>
