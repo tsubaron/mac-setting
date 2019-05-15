@@ -4,12 +4,14 @@ noremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+nmap <Leader>y "*y
+vmap <Leader>y "*y
+nmap <Leader>d "*d
+vmap <Leader>d "*d
+nmap <Leader>p "*p
+vmap <Leader>p "*p
+nmap <Leader>P "*P
+vmap <Leader>P "*P
 
 nmap <Leader><Leader> V
 
@@ -17,9 +19,9 @@ nmap <Leader><Leader> V
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
+"vnoremap <silent> y y`]
+"vnoremap <silent> p p`]
+"nnoremap <silent> p p`]
 
-
-
+imap kk <Esc>
+imap jj <Esc>
