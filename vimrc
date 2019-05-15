@@ -19,9 +19,14 @@ nmap <Leader><Leader> V
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-"vnoremap <silent> y y`]
-"vnoremap <silent> p p`]
-"nnoremap <silent> p p`]
-
 imap kk <Esc>
 imap jj <Esc>
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+imap { {}<Left>
+imap ' ''<Left>
+imap " ""<Left>
+imap ( ()<Left>
