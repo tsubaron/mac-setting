@@ -1,19 +1,308 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD TREE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd VimEnter * execute 'NERDTree'
-map <leader>nn :NERDTreeToggle<cr>
+map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ag.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>g :Ag 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ale(Asynchronous Lint Engine)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_lint_on_text_changed = 0
 
-" vim-expand-region v連打で選択範囲拡大
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-expand-region
+" v連打で選択範拡大
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Phpactor VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+
+" Invoke the context menu
+nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+
+" Invoke the navigation menu
+nmap <Leader>nn :call phpactor#Navigate()<CR>
+
+" Goto definition of class or class member under the cursor
+nmap <Leader>o :call phpactor#GotoDefinition()<CR>
+
+" Show brief information about the symbol under the cursor
+nmap <Leader>K :call phpactor#Hover()<CR>
+
+" Transform the classes in the current file
+nmap <Leader>tt :call phpactor#Transform()<CR>
+
+" Generate a new class (replacing the current file)
+nmap <Leader>cc :call phpactor#ClassNew()<CR>
+
+" Extract expression (normal mode)
+nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+
+" Extract expression from selection
+vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+
+" Extract method from selection
+vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
+
+" 入力補完
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-easymotion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>k <Plug>(easymotion-bd-w)
+nmap <Leader>k <Plug>(easymotion-overwin-w)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" deoplete.nvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:deoplete#enable_at_startup = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Important:
+""       This requries that you install https://github.com/amix/vimrc !
+""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+"
+"""""""""""""""""""""""""""""""
+"" => Load pathogen paths
+"""""""""""""""""""""""""""""""
+""call pathogen#infect('~/.vim_runtime/sources_forked/{}')
+""call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
+"call pathogen#infect('../sources_forked/{}')
+"call pathogen#infect('../sources_non_forked/{}')
+"call pathogen#helptags()
+"
+"""""""""""""""""""""""""""""""
+"" => bufExplorer plugin
+"""""""""""""""""""""""""""""""
+"let g:bufExplorerDefaultHelp=0
+"let g:bufExplorerShowRelativePath=1
+"let g:bufExplorerFindActive=1
+"let g:bufExplorerSortBy='name'
+"map <leader>o :BufExplorer<cr>
+"
+"
+"""""""""""""""""""""""""""""""
+"" => MRU plugin
+"""""""""""""""""""""""""""""""
+"let MRU_Max_Entries = 400
+""map <leader>f :MRU<CR>
+"
+"
+"""""""""""""""""""""""""""""""
+"" => YankStack
+"""""""""""""""""""""""""""""""
+"nmap <c-p> <Plug>yankstack_substitute_older_paste
+"nmap <c-P> <Plug>yankstack_substitute_newer_paste
+"
+"
+"""""""""""""""""""""""""""""""
+"" => CTRL-P
+"""""""""""""""""""""""""""""""
+"let g:ctrlp_working_path_mode = 0
+"
+"let g:ctrlp_map = '<c-f>'
+"map <leader>j :CtrlP<cr>
+"map <c-b> :CtrlPBuffer<cr>
+"
+"let g:ctrlp_max_height = 20
+"let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+"
+"""""""""""""""""""""""""""""""
+"" => ZenCoding
+"""""""""""""""""""""""""""""""
+"" Enable all functions in all modes
+"let g:user_zen_mode='a'
+"
+"
+"""""""""""""""""""""""""""""""
+"" => snipMate (beside <TAB> support <CTRL-j>)
+"""""""""""""""""""""""""""""""
+"ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
+"snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+"
+"
+"""""""""""""""""""""""""""""""
+"" => Vim grep
+"""""""""""""""""""""""""""""""
+"let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
+"set grepprg=/bin/grep\ -nH
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Nerd Tree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:NERDTreeWinPos = "right"
+"let NERDTreeShowHidden=1
+"let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+"let g:NERDTreeWinSize=35
+"map <leader>nn :NERDTreeToggle<cr>
+"map <leader>nb :NERDTreeFromBookmark
+"map <leader>nf :NERDTreeFind<cr>
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => vim-multiple-cursors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:multi_cursor_next_key='<C-s>'
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => surround.vim config
+"" Annotate strings with gettext http://amix.dk/blog/post/19678
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vmap Si S(i_<esc>f)
+"au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => lightline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ }
+"
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ 'active': {
+"      \   'left': [ ['mode', 'paste'],
+"      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+"      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+"      \ },
+"      \ 'component': {
+"      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+"      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+"      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+"      \ },
+"      \ 'component_visible_condition': {
+"      \   'readonly': '(&filetype!="help"&& &readonly)',
+"      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+"      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+"      \ },
+"      \ 'separator': { 'left': ' ', 'right': ' ' },
+"      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+"      \ }
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Vimroom
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:goyo_width=100
+"let g:goyo_margin_top = 2
+"let g:goyo_margin_bottom = 2
+"nnoremap <silent> <leader>z :Goyo<cr>
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Vim-go
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:go_fmt_command = "goimports"
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Syntastic (syntax checker)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Python
+""let g:syntastic_python_checkers=['pyflakes']
+"
+"" Javascript
+""let g:syntastic_javascript_checkers = ['jshint']
+""let g:syntastic_html_checkers=['']
+"
+"" Go
+""let g:syntastic_auto_loc_list = 1
+""let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+"
+"" Custom CoffeeScript SyntasticCheck
+""func! SyntasticCheckCoffeescript()
+""    let l:filename = substitute(expand("%:p"), '\(\w\+\)\."coffee', '.coffee.\1.js', '')
+""    execute "tabedit " . l:filename
+""    execute "SyntasticCheck"
+""    execute "Errors"
+""endfunc
+""nnoremap <silent> <leader>l :call SyntasticCheckCoffeescript()<cr>
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Git gutter (Git diff)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:gitgutter_enabled=0
+"nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ag.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>g :Ag 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ale(Asynchronous Lint Engine)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_lint_on_text_changed = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-expand-region
+" v連打で選択範拡大
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Phpactor VIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+
+" Invoke the context menu
+nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+
+" Invoke the navigation menu
+nmap <Leader>nn :call phpactor#Navigate()<CR>
+
+" Goto definition of class or class member under the cursor
+nmap <Leader>o :call phpactor#GotoDefinition()<CR>
+
+" Show brief information about the symbol under the cursor
+nmap <Leader>K :call phpactor#Hover()<CR>
+
+" Transform the classes in the current file
+nmap <Leader>tt :call phpactor#Transform()<CR>
+
+" Generate a new class (replacing the current file)
+nmap <Leader>cc :call phpactor#ClassNew()<CR>
+
+" Extract expression (normal mode)
+nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+
+" Extract expression from selection
+vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+
+" Extract method from selection
+vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Important:

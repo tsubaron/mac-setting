@@ -60,3 +60,8 @@
   | copyモード → v | copyモード範囲選択開始||
   | copyモード → Enter | 選択範囲の内容をコピーしcopyモード終了||
   | Ctrl + a → b | デタッチ ||
+
+## vim
+下記をvim起動後、実行してプラグインをインストールする
+:PlugInstall
+
