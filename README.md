@@ -1,7 +1,7 @@
 # インストール方法
 
   クローンしたディレクトリに移動して下記を実行する
-  sudo sh ./init.sh
+  sudo sh ./shells/init.sh
 
 # 設定項目
 ## binファイルの移動

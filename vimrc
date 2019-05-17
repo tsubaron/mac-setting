@@ -1,27 +1,43 @@
-let mapleader = "\<Space>"
+source ~/mac-setting/vimrcs/basic.vim
+source ~/mac-setting/vimrcs/plugins_config.vim
+"source ~/mac-setting/vim/vimrcs/filetypes.vim
 
-noremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+" deinvim
+if &compatible
+  set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-nmap <Leader>y "*y
-vmap <Leader>y "*y
-nmap <Leader>d "*d
-vmap <Leader>d "*d
-nmap <Leader>p "*p
-vmap <Leader>p "*p
-nmap <Leader>P "*P
-vmap <Leader>P "*P
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
-nmap <Leader><Leader> V
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
-" v連打で選択範囲拡大
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
+  " NERD TREE エクスプローラー
+  call dein#add('scrooloose/nerdtree')
+  " Ag 検索関連
+  call dein#add('rking/ag.vim')
+  " Asynchronous Lint Engine シンタックスチェック
+  call dein#add('w0rp/ale')
+  " vim-expand-region 範囲選択
+  call dein#add('terryma/vim-expand-region')
+  " vim-fugitive
+  call dein#add('tpope/vim-fugitive')
 
-imap kk <Esc>
-imap jj <Esc>
+  call dein#end()
+  call dein#save_state()
+endif
 
-vnoremap <silent> y y`]
-vnoremap <silent> p p`]
-nnoremap <silent> p p`]
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
