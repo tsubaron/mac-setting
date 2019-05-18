@@ -59,6 +59,11 @@ map <C-l> <C-W>l
 " ハイライト
 set hlsearch
 
+" 行頭行末で上下の行に移動
+set whichwrap=h,l
+
+" 全角スペースの背景を白に変更
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Maintainer: 
 ""       Amir Salihefendic

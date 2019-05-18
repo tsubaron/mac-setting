@@ -2,7 +2,7 @@ source ~/mac-setting/vimrcs/basic.vim
 source ~/mac-setting/vimrcs/plugins_config.vim
 "source ~/mac-setting/vim/vimrcs/filetypes.vim
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
   " NERD TREE エクスプローラー
   Plug 'scrooloose/nerdtree'
   " Ag 検索関連
@@ -23,6 +23,8 @@ call plug#begin()
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   " deoplete-phpactor
   Plug 'kristijanhusak/deoplete-phpactor'
+  " vim-zenspace 全角スペース可視化
+  "Plug 'thinca/vim-zenspace'
 call plug#end()
 
 " deinvim
