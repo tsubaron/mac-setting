@@ -1,6 +1,6 @@
 source ~/mac-setting/vimrcs/basic.vim
 source ~/mac-setting/vimrcs/plugins_config.vim
-"source ~/mac-setting/vim/vimrcs/filetypes.vim
+source ~/mac-setting/vimrcs/filetypes.vim
 
 call plug#begin('~/.vim/plugged')
   " NERD TREE エクスプローラー
@@ -20,11 +20,15 @@ call plug#begin('~/.vim/plugged')
   " vim-easymotion
   Plug 'easymotion/vim-easymotion'
   " deoplete.nvim
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   " deoplete-phpactor
   Plug 'kristijanhusak/deoplete-phpactor'
   " vim-zenspace 全角スペース可視化
-  "Plug 'thinca/vim-zenspace'
+  Plug 'thinca/vim-zenspace'
+  " Dart
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 " deinvim
