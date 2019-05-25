@@ -65,3 +65,13 @@
 下記をvim起動後、実行してプラグインをインストールする
 :PlugInstall
 
+.zshrcに書きを追加
+v="nvim"
+
+## oh my zsh
+### テーマ変更
+	
+  $ vim ~/.zshrc
+  '''
+  ZSH_THEME="fishy"
+  '''

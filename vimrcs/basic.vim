@@ -26,7 +26,11 @@ nnoremap <silent> p p`]
 
 " 行番号
 set number
+
+" バックアップ
 set nobackup
+set nowb
+set noswapfile
 
 " インデント
 set ai
@@ -63,6 +67,10 @@ set hlsearch
 set whichwrap=h,l
 
 " 全角スペースの背景を白に変更
+
+" ファイルを閉じてもundoできるよにする
+set undodir=~/.vim/undo
+set undofile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Maintainer: 

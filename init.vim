@@ -1,6 +1,6 @@
 source ~/mac-setting/vimrcs/basic.vim
 source ~/mac-setting/vimrcs/plugins_config.vim
-"source ~/mac-setting/vim/vimrcs/filetypes.vim
+source ~/mac-setting/vimrcs/filetypes.vim
 
 call plug#begin('~/.vim/plugged')
   " NERD TREE エクスプローラー
@@ -24,7 +24,15 @@ call plug#begin('~/.vim/plugged')
   " deoplete-phpactor
   Plug 'kristijanhusak/deoplete-phpactor'
   " vim-zenspace 全角スペース可視化
-  "Plug 'thinca/vim-zenspace'
+  Plug 'thinca/vim-zenspace'
+  " vim-javascript
+  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+  " js シンタックス
+  Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+  Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 call plug#end()
 
 " deinvim
