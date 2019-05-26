@@ -67,9 +67,14 @@ set hlsearch
 set whichwrap=h,l
 
 " 全角スペースの背景を白に変更
+let g:zenspace#default_mode = 'on'
+
+" タブ可視化
+set list
+set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 
 " ファイルを閉じてもundoできるよにする
-set undodir=~/.vim/undo
+set undodir=~/.local/share/nvim/undo
 set undofile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

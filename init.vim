@@ -2,7 +2,7 @@ source ~/mac-setting/vimrcs/basic.vim
 source ~/mac-setting/vimrcs/plugins_config.vim
 source ~/mac-setting/vimrcs/filetypes.vim
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
   " NERD TREE エクスプローラー
   Plug 'scrooloose/nerdtree'
   " Ag 検索関連
@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
   " vim-easymotion
   Plug 'easymotion/vim-easymotion'
   " deoplete.nvim
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   " deoplete-phpactor
   Plug 'kristijanhusak/deoplete-phpactor'
@@ -33,6 +34,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+  " Dart
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'thosakwe/vim-flutter'
 call plug#end()
 
 " deinvim
