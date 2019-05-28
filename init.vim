@@ -37,6 +37,8 @@ call plug#begin('~/.local/share/nvim/plugged')
   " Dart
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'thosakwe/vim-flutter'
+  " vim-table-mode
+  Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 " deinvim
