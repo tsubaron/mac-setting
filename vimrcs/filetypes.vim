@@ -132,7 +132,7 @@ function! PhpSetting()
   "let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
 
   "nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
-  nnoremap <silent><leader>f :call PhpCsFixerFixFile()<CR>
+  "nnoremap <silent><leader>f :call PhpCsFixerFixFile()<CR>
 endfunction
 au FileType php call PhpSetting()
 

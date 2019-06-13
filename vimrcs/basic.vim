@@ -77,6 +77,9 @@ set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 set undodir=~/.local/share/nvim/undo
 set undofile
 
+" 入力していない文字でもバックスペースできるようにする設定
+set backspace=eol,start,indent
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Maintainer: 
 ""       Amir Salihefendic
