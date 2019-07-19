@@ -38,9 +38,9 @@ set si
 set nowrap
 
 " タブ関連の設定
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
@@ -49,6 +49,9 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.js setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " シンタックス
@@ -76,6 +79,8 @@ set listchars=tab:»-,trail:-,nbsp:%,eol:↲
 " ファイルを閉じてもundoできるよにする
 set undodir=~/.local/share/nvim/undo
 set undofile
+set undolevels=10000
+set undoreload=100000
 
 " 入力していない文字でもバックスペースできるようにする設定
 set backspace=eol,start,indent
