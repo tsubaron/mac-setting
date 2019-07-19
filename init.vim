@@ -14,16 +14,16 @@ call plug#begin('~/.local/share/nvim/plugged')
   " vim-fugitive
   Plug 'tpope/vim-fugitive'
   " Phpactor
-  Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+"  Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
   " vim-fugitive
   Plug 'tpope/vim-fugitive'
   " vim-easymotion
   Plug 'easymotion/vim-easymotion'
   " deoplete.nvim
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"  Plug 'roxma/vim-hug-neovim-rpc'
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   " deoplete-phpactor
-  Plug 'kristijanhusak/deoplete-phpactor'
+"  Plug 'kristijanhusak/deoplete-phpactor'
   " vim-zenspace 全角スペース可視化
   Plug 'thinca/vim-zenspace'
   " vim-javascript
