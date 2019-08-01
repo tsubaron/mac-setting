@@ -1,10 +1,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERD TREE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd VimEnter * execute 'NERDTree'
+"autocmd VimEnter * execute 'NERDTree'
 map <leader>nt :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
+let NERDTreeWinSize=50
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ag.vim
