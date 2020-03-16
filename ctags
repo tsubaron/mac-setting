@@ -1,0 +1,9 @@
+--exclude=*.js
+--exclude=.git
+--exclude=node_modules
+--exclude=vendor
+--append=yes
+--recurse=yes
+--php-kinds=cfd
+--html-kinds=af
+--java-kinds=cfimp
