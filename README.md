@@ -2,6 +2,7 @@
 
   クローンしたディレクトリに移動して下記を実行する
   sudo sh ./shells/init.sh
+  nvim実行後、:PlugInstall実行する
 
 # 設定項目
 ## binファイルの移動
