@@ -1,17 +1,19 @@
 # インストール方法
-
-  クローンしたディレクトリに移動して下記を実行する
-  sudo sh ./shells/root-init.sh
-  sh ./shells/user-init.sh
-  nvim実行後、:PlugInstall実行する
+```
+クローンしたディレクトリに移動して下記を実行する
+sudo sh ./shells/root-init.sh
+sh ./shells/user-init.sh
+nvim実行後、:PlugInstall実行する
+```
 
 # 設定項目
 ## binファイルの移動
-
+```
   binファイルが/usr/local/bin以下に移動する
   下記のコマンドが使用可能となる
-  - wifi
-  - battery
+  ・wifi
+  ・battery
+```
 
 ## osの設定変更
 
