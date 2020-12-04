@@ -1,7 +1,8 @@
 # インストール方法
 
   クローンしたディレクトリに移動して下記を実行する
-  sudo sh ./shells/init.sh
+  sudo sh ./shells/root-init.sh
+  sh ./shells/user-init.sh
   nvim実行後、:PlugInstall実行する
 
 # 設定項目
