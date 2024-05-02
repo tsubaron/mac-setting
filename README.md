@@ -76,6 +76,6 @@ v="nvim"
 ### テーマ変更
 	
 $ vim ~/.zshrc
-'''
+```
 ZSH_THEME="fishy"
-'''
+```
